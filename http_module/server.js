@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
 
     if (req.url === "/about") {
         res.setHeader("Content-Type", "text/plain")
-        res.write("This is my about page as you kno hello howa this is my email address: iosabbir7890@gmail.com");
+        res.write("This mail.com");
         res.end();
     }
 });
