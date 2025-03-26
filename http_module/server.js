@@ -5,7 +5,15 @@ const server = http.createServer((req, res) => {
         res.write("welcome to my website");
         res.end();
     }
+
+    if (req.url === "/about") {
+        res.setHeader("Content-Type", "text/plain")
+        res.write("This is my about page as yo hehehhehehhehhehehheheu kno hello howa rey this is my email address: iosabbir7890@gmail.com");
+        res.end();
+    }
 });
+
+
 
 // Web server
 const PORT = 3000;
