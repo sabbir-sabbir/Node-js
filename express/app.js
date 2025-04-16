@@ -1,18 +1,20 @@
 import express from 'express';
 import { PORT } from './env.js';
 
+// instantiate express app
 const app = express();
 
-app.get('/', (req, res)=> {
-    res.send("hello world!")
-});
-app.get('/about', (req, res)=> {
-    res.send("hello About page!")
-});
+app.get("/", (req, res)=> {
 
+    const __filename = new URL(import.meta.url).pathname;
+    console.log(__filename);
+    
+    
+    res.send("Hello World!");
+})
 
 
 app.listen(PORT, ()=> {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on -- --- -- port ${PORT}`);
     
 })

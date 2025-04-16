@@ -1,6 +1,6 @@
 import {z, ZodError} from 'zod';
 
-const portSchema = z.coerce.number().min(1).max(3000).default(3000);
+const portSchema = z.coerce.number().min(1).max(8000).default(3000);
 
 export const PORT = portSchema.parse(process.env.PORT);
 
