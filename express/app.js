@@ -1,16 +1,22 @@
 import express from 'express';
 import { PORT } from './env.js';
+import path from 'path';
 
 // instantiate express app
 const app = express();
 
 app.get("/", (req, res)=> {
-
-    const __filename = new URL(import.meta.url).pathname;
-    console.log(__filename);
     
-    
-    res.send("Hello World!");
+    const forHomePage = path.join(import.meta.dirname, "public", "index.html");
+   
+    res.sendFile(forHomePage, (err)=> {
+        if(err){
+            console.log(err);
+            res.status(500).send("Internal Server Error");
+        } else {
+            console.log("File sent successfully");
+        }
+    });
 })
 
 
