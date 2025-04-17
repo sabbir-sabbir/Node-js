@@ -8,6 +8,18 @@ const staticPath = path.join(import.meta.dirname, "public");
 app.use( express.static(staticPath));
 
 app.get("/profile/:username", (req, res)=> {
+    console.log(req.params);
+    res.send("Hello " + req.params.username);
+    
+   
+})
+
+
+app.get("/profile/:username/article/:slug", (req, res)=> {
+    console.log(req.params);
+    const formattedSlug = req.params.slug.replace(/-/g, " ");
+    res.send("Hello " + req.params.username + " and your article is " + formattedSlug);
+    
    
 })
 
