@@ -23,6 +23,14 @@ app.get("/profile/:username/article/:slug", (req, res)=> {
    
 })
 
+app.get("/product", (req, res)=> {
+    console.log(req.query);
+    res.send("HELLO THIS IS PRODUCT" + " " + req.query.search + " " +  req.query.id);
+    
+     
+    
+ })
+
 
 app.listen(PORT, ()=> {
     console.log(`Server is running on -- (*_*) --- -- port ${PORT}`);
