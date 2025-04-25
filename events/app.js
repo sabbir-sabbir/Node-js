@@ -1,9 +1,8 @@
-const EventEmitter = require("events").EventEmitter;
+const School = require("./school");
+const school = new School();
 
-const emitter = new EventEmitter();
+school.on('bellRing', ({period, subject, teacher}) => {
+    console.log(`The ${period} period has started. Subject: ${subject}. Teacher: ${teacher}`);
+});
 
-emitter.on("greet", (userName, prof)=> {
-    console.log(`hello world ${userName}  ${prof}` );
-    
-})
-emitter.emit("greet", "SABBIR RAHMAN", "full stack developer");
+school.startPeriod();
