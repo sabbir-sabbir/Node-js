@@ -1,5 +1,4 @@
-const http = require("http");
-
+import http from "http";
 const server = http.createServer((req, res) => {
     if (req.url === "/") {
         res.write("welcome to my website");
@@ -8,7 +7,7 @@ const server = http.createServer((req, res) => {
 
     if (req.url === "/about") {
         res.setHeader("Content-Type", "text/plain")
-        res.write("This mail.com");
+        res.write("SABBIR RAHMAN");
         res.end();
     }
 });
