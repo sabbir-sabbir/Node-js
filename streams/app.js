@@ -1,5 +1,50 @@
+import http from "http";
 import {createReadStream, createWriteStream} from 'fs';
 import path from 'path';
+
+// const server = http.createServer((req, res) => {
+//     if (req.url === "/") {
+//         res.write('<html><head><title>Form</title></head>');
+//         res.write('<body><form method="post" action="/process"> <input name="message" > </form></body>');
+//         res.end();
+//     }
+
+//     if (req.url === '/process' && req.method === 'POST') {
+//         req.on("data", (chunk)=> {
+//           console.log(chunk.toString());
+          
+//         })
+//         res.setHeader("Content-Type", "text/plain")
+//         res.write("Thanks for submitting");
+//         res.end();
+//     }
+// });
+
+
+
+// // Web server
+// const PORT = 3000;
+// server.listen(PORT, () => {
+//     console.log(`The server port is ${PORT}`);
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const inputFilePath = path.join(import.meta.dirname, "input.txt");
 const outputFilePath = path.join(import.meta.dirname, "output.txt");
